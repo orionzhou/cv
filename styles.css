@@ -438,7 +438,13 @@ h1, h2{
   line-height: 1.2;
 }
 
-
+.skill-bar {
+  color: white;
+  padding: 0.1rem 0.25rem;
+  margin-top: 3px;
+  position: relative;
+  width: 100%;
+}
 
 
 #disclaimer{

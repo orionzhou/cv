@@ -1,6 +1,6 @@
 ---
-title: "Guangchuang Yu's CV"
-author: Guangchuang Yu
+title: "Peng Zhou's CV"
+author: Peng Zhou
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -28,6 +28,7 @@ Biocpkg <- function (pkg) {
 
 library(glue)
 library(tidyverse)
+library(readxl)
 
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
@@ -141,17 +142,37 @@ print_section <- function(position_data, section_id){
 }
 
 
+print_skill_bars <- function(skills, out_of = 5, bar_color = "#969696", bar_background = "#d9d9d9", glue_template = "default"){
+
+  if(glue_template == "default"){
+    glue_template <- "
+<div
+  class = 'skill-bar'
+  style = \"background:linear-gradient(to right,
+                                      {bar_color} {width_percent}%,
+                                      {bar_background} {width_percent}% 100%)\"
+>{skill}</div>"
+  }
+  skills %>%
+    dplyr::mutate(width_percent = round(100*as.numeric(level)/out_of)) %>%
+    glue::glue_data(glue_template) %>%
+    print()
+
+}
+
 
 fill_nas <- function(column){
   ifelse(is.na(column), 'N/A', column)
 }
 
 # Load csv with position info
-position_data <- read_csv('positions.csv') %>% 
+position_data <- read_xlsx('cv.xlsx', sheet='positions', na = "NA") %>% 
   mutate_all(fill_nas) %>% 
   arrange(order, desc(end)) %>% 
   mutate(id = 1:n()) %>% 
   nest(data = c(-id, -section))
+  
+skills <- read_xlsx('cv.xlsx', sheet='language_skills')
 ```
 
 ```{r}
@@ -171,12 +192,12 @@ Aside
 ================================================================================
 
 
-![logo](ygc.jpg){width=100%}
+![logo](avatar.jpg){width=100%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("View this CV online with links at _guangchuangyu.github.io/cv_")
+  cat("View this CV online with links at _orionzhou.github.io/cv_")
 }
 ```
 
@@ -184,40 +205,19 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> guangchuangyu@gmail.com
-- <i class="fa fa-twitter"></i> guangchuangyu
-- <i class="fa fa-github"></i> github.com/GuangchuangYu
-- <i class="fa fa-link"></i> guangchuangyu.github.io
-- <i class="fa fa-weixin"></i> biobabble
-- <i class="fa fa-phone"></i> (86) 13826432521
+- <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
+- <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
+- <i class="fa fa-envelope"></i> zhoupenggeni@gmail.com
+- <i class="fa fa-phone"></i> (+1) 6125323168
 
 
 
-Selected R packages {#skills}
+Language Skills {#skills}
 --------------------------------------------------------------------------------
 
-NGS
-
-- ChIPseeker
-
-Ontology
-
-- clusterProfiler 
-- DOSE
-- enrichplot
-- GOSemSim
-
-Phylogeny
-
-- tidytree
-- treeio
-- ggtree
-
-Visualization
-
-- ggimage
-- ggplotify
-- seqcombo
+```{r}
+print_skill_bars(skills)
+```
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
@@ -230,22 +230,17 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Guangchuang Yu {#title}
+Peng Zhou {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r, results='asis'}
-intro_text <- glue("Professor of Bioinformatics at [Southern Medical University](http://www.smu.edu.cn/). I have developed more than 20 R packages, including ",
-  {Biocpkg("clusterProfiler")}, ", ", 
-  {Biocpkg("ChIPseeker")}, ", ",
-  {Biocpkg("treeio")}, " and ",
-  {Biocpkg("ggtree")}, 
-  ", to help biologists to explore and understand their data.")
+intro_text <- glue("Post Doctoral Associate at [University of Minnesota](https://maizeumn.github.io) working on maize genomics, gene regulation, heterosis and stress response.")
 
 cat(sanitize_links(intro_text))
 ```
 
-I am broadly interested in bioinformatics, metagenomics, molecular evolution, data integration and visualization.
+I am broadly interested in genomics, computational biology, data integration and visualization.
 
 
 
@@ -266,14 +261,6 @@ print_section(position_data, 'education')
 ```
 
 
-Certificate {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r, results='asis', echo = FALSE}
-print_section(position_data, 'certificate')
-```
-
-
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
@@ -281,27 +268,6 @@ Teaching Experience {data-icon=chalkboard-teacher}
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
-
-
-
-Grants  {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'grant')
-```
-
-
-
-Books {data-icon=book}
---------------------------------------------------------------------------------
-
-
-
-```{r}
-print_section(position_data, 'book_chapters')
-```
-
 
 
 Publications {data-icon=book}
@@ -333,10 +299,34 @@ print_section(position_data, 'academic_articles')
 ```
 
 
-
-Conference proceedings {data-icon=group}
+Professional service {data-icon=user-friends}
 --------------------------------------------------------------------------------
 
+### Reviewer for journals
+
+N/A
+
+N/A
+
+- Plant Biotechnology Journal
+- Plant Science
+- The Plant Genome
+- Plant Direct
+- Crop Science
+
+
+
+Conference presentations {data-icon=group}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'conference')
+```
+
+
+Invited Presentations/Seminars {data-icon=group}
+--------------------------------------------------------------------------------
 
 
 ```{r}

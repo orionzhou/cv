@@ -9,7 +9,7 @@ library(ggtree)
 #Sys.setenv(http_proxy="http://127.0.0.1:43723")
 
 
-id <- 'DO5oG40AAAAJ'
+id <- 'Hcb6i0gAAAAJ'
 
 profile <- tryCatch(get_profile(id), error = function(e) return(NULL))
 if (!is.null(profile)) {
@@ -38,7 +38,7 @@ p <- ggplot(citation, aes(cites, year)) +
           plot.caption=element_text(colour='grey30')) +
     theme_transparent() 
 
-ggsave(p, file = "citation.png", width=3.5, height=6, bg = "transparent")
+ggsave(p, file = "citation.png", width=3.5, height=4, bg = "transparent")
 
 
 ## library(magick)
