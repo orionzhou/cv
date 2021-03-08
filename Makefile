@@ -1,6 +1,6 @@
 all: cv pdf
 
-cv: citation
+cv: citation2
 	Rscript -e 'rmarkdown::render("index.Rmd")'
 
 cv2:
@@ -15,4 +15,11 @@ citation:
 	#source /data/gitee/ygc-utilities/proxy.sh; \
 	Rscript -e 'source("citation.R")'#; \
 	#source /data/gitee/ygc-utilities/unproxy.sh
+
+citation2:
+	Rscript -e 'source("citation.R")'
+
+tolabsite:
+	cp index.html ../yulab-smu.github.io/static/cv/ygc/
+
 

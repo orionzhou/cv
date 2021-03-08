@@ -201,18 +201,17 @@ if(PDF_EXPORT){
 }
 ```
 
-Contact {#contact}
+联系方式 {#contact}
 --------------------------------------------------------------------------------
 
 
 - <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
 - <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
 - <i class="fa fa-envelope"></i> zhoupenggeni@gmail.com
-- <i class="fa fa-phone"></i> (+1) 6125323168
 
 
 
-Language Skills {#skills}
+编程技能 {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -223,45 +222,41 @@ Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 
-Last updated on `r Sys.Date()`.
+最近更新于 `r Sys.Date()`.
 
 
 
 Main
 ================================================================================
 
-Peng Zhou {#title}
+周鹏 {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r, results='asis'}
-intro_text <- glue("Post Doctoral Associate at [University of Minnesota](https://maizeumn.github.io) working on maize genomics, gene regulation, heterosis and stress response.")
+intro_text <- glue("Post Doctoral Associate at [University of Minnesota](https://maizeumn.github.io) working on maize genomics and epi-genomics, gene regulatory networks, heterosis and abiotic stress response.")
 
 cat(sanitize_links(intro_text))
 ```
 
-I am broadly interested in genomics, computational biology, data integration and visualization.
+I am broadly interested in plant genomics and epi-genomics, functional genomics and predictive biology.
 
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-
-```{r, results='asis', echo = FALSE}
-print_section(position_data, 'research_positions')
-```
-
-
-Education {data-icon=graduation-cap data-concise=true}
+教育背景 {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'education')
 ```
 
+研究经历 {data-icon=laptop}
+--------------------------------------------------------------------------------
 
-Teaching Experience {data-icon=chalkboard-teacher}
+```{r, results='asis', echo = FALSE}
+print_section(position_data, 'research_positions')
+```
+
+教学经历 {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 
@@ -270,7 +265,7 @@ print_section(position_data, 'teaching_positions')
 ```
 
 
-Publications {data-icon=book}
+发表文章 {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -299,10 +294,10 @@ print_section(position_data, 'academic_articles')
 ```
 
 
-Professional service {data-icon=user-friends}
+职业经历 {data-icon=user-friends}
 --------------------------------------------------------------------------------
 
-### Reviewer for journals
+### 杂志审稿人
 
 N/A
 
@@ -316,7 +311,7 @@ N/A
 
 
 
-Conference presentations {data-icon=group}
+大会经历 {data-icon=group}
 --------------------------------------------------------------------------------
 
 
@@ -325,7 +320,7 @@ print_section(position_data, 'conference')
 ```
 
 
-Invited Presentations/Seminars {data-icon=group}
+应邀报告 {data-icon=group}
 --------------------------------------------------------------------------------
 
 
