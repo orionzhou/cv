@@ -201,7 +201,7 @@ if(PDF_EXPORT){
 }
 ```
 
-联系方式 {#contact}
+Contact {#contact}
 --------------------------------------------------------------------------------
 
 
@@ -211,7 +211,7 @@ if(PDF_EXPORT){
 
 
 
-编程技能 {#skills}
+Coding Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -222,14 +222,14 @@ Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 
-最近更新于 `r Sys.Date()`.
+Last updated on `r Sys.Date()`.
 
 
 
 Main
 ================================================================================
 
-周鹏 {#title}
+Peng Zhou {#title}
 --------------------------------------------------------------------------------
 
 
@@ -242,30 +242,29 @@ cat(sanitize_links(intro_text))
 I am broadly interested in plant genomics and epi-genomics, functional genomics and predictive biology.
 
 
-教育背景 {data-icon=graduation-cap data-concise=true}
+Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'education')
 ```
 
-研究经历 {data-icon=laptop}
+Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'research_positions')
 ```
 
-教学经历 {data-icon=chalkboard-teacher}
+Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
-
 
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
 
 
-发表文章 {data-icon=book}
+Representative Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -290,14 +289,22 @@ profile = jsonlite::fromJSON("profile.json")
 
 
 ```{r}
+print_section(position_data, 'academic_articles0')
+```
+
+Other Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r}
 print_section(position_data, 'academic_articles')
 ```
 
 
-职业经历 {data-icon=user-friends}
+Professional service {data-icon=user-friends}
 --------------------------------------------------------------------------------
 
-### 杂志审稿人
+### Reviewer for journals
 
 N/A
 
@@ -311,7 +318,7 @@ N/A
 
 
 
-大会经历 {data-icon=group}
+Conference presentations {data-icon=group}
 --------------------------------------------------------------------------------
 
 
@@ -320,7 +327,7 @@ print_section(position_data, 'conference')
 ```
 
 
-应邀报告 {data-icon=group}
+Invited Presentations/Seminars {data-icon=group}
 --------------------------------------------------------------------------------
 
 
