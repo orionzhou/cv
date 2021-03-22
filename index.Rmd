@@ -234,13 +234,10 @@ Peng Zhou {#title}
 
 
 ```{r, results='asis'}
-intro_text <- glue("Post Doctoral Associate at [University of Minnesota](https://maizeumn.github.io) working on maize genomics and epi-genomics, gene regulatory networks, heterosis and abiotic stress response.")
+intro_text <- glue("<font size=2.5>Post Doctoral Associate at University of Minnesota. Using a combination of classical genetics, comparative genomics and multi-omics approaches, I want to understand the regulatory mechanism of gene expression during plant development and under stress conditions. My research interests also include building plant gene regulatory networks, training machine learning models to predict temporal/spatial gene expression patterns, as well as understanding the molecular mechanism giving rise to heterosis.</font>")
 
 cat(sanitize_links(intro_text))
 ```
-
-I am broadly interested in plant genomics and epi-genomics, functional genomics and predictive biology.
-
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
