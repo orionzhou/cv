@@ -205,9 +205,8 @@ if(PDF_EXPORT){
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
-- <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
-- <i class="fa fa-envelope"></i> zhoupenggeni@gmail.com
+- <i class="fa fa-envelope"></i> zheng736@umn.edu
+- <i class="fa fa-phone"></i> 198-4015-5752
 
 
 Disclaimer {#disclaimer}
@@ -247,7 +246,7 @@ print_section(position_data, 'working')
 ```
 
 
-领导经历 {data-icon=people}
+领导经历 {data-icon=users}
 --------------------------------------------------------------------------------
 
 ```{r}
