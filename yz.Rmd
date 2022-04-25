@@ -231,33 +231,39 @@ cat(sanitize_links(intro_text))
 ```
 
 
-教育背景 {data-icon=graduation-cap data-concise=true}
+教育背景 {data-concise=true data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'education')
 ```
 
-工作/实习/志愿服务经历 {data-icon=laptop}
+工作经历 {data-concise=true data-icon=briefcase}
 --------------------------------------------------------------------------------
 
-```{r, results='asis', echo = FALSE}
+```{r}
 print_section(position_data, 'working')
 ```
 
+实习/志愿服务经历 {data-concise=true data-icon=hospital}
+--------------------------------------------------------------------------------
 
-领导经历 {data-icon=users}
+```{r}
+print_section(position_data, 'voluntary')
+```
+
+领导经历 {data-concise=true data-icon=users}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'leadership')
 ```
 
-获奖情况 {data-icon=trophy}
+获奖情况 {data-concise=true data-icon=trophy}
 --------------------------------------------------------------------------------
 
 
-```{r}
+```{r, results='asis', echo = FALSE}
 print_section(position_data, 'awards')
 ```
 
