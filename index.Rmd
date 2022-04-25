@@ -2,6 +2,8 @@
 title: "Peng Zhou's CV"
 author: Peng Zhou
 date: "`r Sys.Date()`"
+paperwidth: 8.27in
+paperheight: 11.69in
 output:
   pagedown::html_resume:
     css: ['styles.css']
