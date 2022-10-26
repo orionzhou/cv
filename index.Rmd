@@ -194,7 +194,7 @@ Aside
 ================================================================================
 
 
-![logo](avatar.jpg){width=100%}
+![logo](a2blue.jpg){width=100%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
@@ -209,16 +209,9 @@ Contact {#contact}
 
 - <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
 - <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
-- <i class="fa fa-envelope"></i> zhoupenggeni@gmail.com
+- <i class="fa fa-envelope"></i> pzhou@caas.cn
 
 
-
-Coding Skills {#skills}
---------------------------------------------------------------------------------
-
-```{r}
-print_skill_bars(skills)
-```
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
@@ -236,7 +229,7 @@ Peng Zhou {#title}
 
 
 ```{r, results='asis'}
-intro_text <- glue("<font size=2.5>Post Doctoral Associate at University of Minnesota. Using a combination of classical genetics, comparative genomics and multi-omics approaches, I want to understand the regulatory mechanism of gene expression during plant development and under stress conditions. My research interests also include building plant gene regulatory networks, training machine learning models to predict temporal/spatial gene expression patterns, as well as understanding the molecular mechanism giving rise to heterosis.</font>")
+intro_text <- glue("<font size=2.5>Principal Investigator at Institute of Crop Sciences, Chinese Academy of Agricultural Sciences (CAAS). Using a combination of classical genetics, comparative genomics and multi-omics approaches, I want to understand the regulatory mechanism of gene expression during plant development and under stress conditions, identify key cis-regulatory elements and transcription factors for crop improvement. My research interests also include constructing plant gene regulatory networks, training machine learning models to predict temporal/spatial gene expression patterns, as well as understanding the molecular mechanism giving rise to heterosis.</font>")
 
 cat(sanitize_links(intro_text))
 ```
@@ -255,17 +248,16 @@ Research Experience {data-icon=laptop}
 print_section(position_data, 'research_positions')
 ```
 
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'teaching_positions')
-```
-
-
 Representative Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
+
+```{r}
+print_section(position_data, 'academic_articles0')
+```
+
+Other Publications {data-icon=book}
+--------------------------------------------------------------------------------
 ::: aside
 
 ```{r}
@@ -286,15 +278,6 @@ profile = jsonlite::fromJSON("profile.json")
 ![](citation.png)
 :::
 
-
-```{r}
-print_section(position_data, 'academic_articles0')
-```
-
-Other Publications {data-icon=book}
---------------------------------------------------------------------------------
-
-
 ```{r}
 print_section(position_data, 'academic_articles')
 ```
@@ -310,11 +293,10 @@ N/A
 N/A
 
 - Plant Biotechnology Journal
+- Plant Physiology
 - Plant Science
+- Crop Journal
 - The Plant Genome
-- Plant Direct
-- Crop Science
-
 
 
 Conference presentations {data-icon=group}

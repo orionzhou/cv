@@ -192,7 +192,7 @@ Aside
 ================================================================================
 
 
-![logo](avatar.jpg){width=100%}
+![logo](a2blue.jpg){width=100%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
@@ -207,7 +207,7 @@ if(PDF_EXPORT){
 
 - <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
 - <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
-- <i class="fa fa-envelope"></i> zhoupenggeni@gmail.com
+- <i class="fa fa-envelope"></i> pzhou@caas.cn
 
 
 Disclaimer {#disclaimer}
@@ -292,10 +292,10 @@ N/A
 N/A
 
 - Plant Biotechnology Journal
+- Plant Physiology
 - Plant Science
+- Crop Journal
 - The Plant Genome
-- Plant Direct
-- Crop Science
 
 
 
