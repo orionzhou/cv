@@ -205,9 +205,9 @@ if(PDF_EXPORT){
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
-- <i class="fa fa-link"></i> [orionzhou.github.io](https://orionzhou.github.io)
+- <i class="fa fa-phone"></i> 13269579596
 - <i class="fa fa-envelope"></i> pzhou@caas.cn
+- <i class="fa fa-github"></i> [github.com/orionzhou](https://github.com/orionzhou)
 
 
 Disclaimer {#disclaimer}
@@ -293,7 +293,7 @@ N/A
 
 - Plant Biotechnology Journal
 - Plant Physiology
-- Plant Science
+- JIPB
 - Crop Journal
 - The Plant Genome
 

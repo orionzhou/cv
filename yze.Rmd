@@ -76,7 +76,7 @@ build_position_from_df <- function(pos_df){
   missing_start <- pos_df$start == 'N/A'
   dates_same <- pos_df$end == pos_df$start
   if (pos_df$end == 9999) {
-    pos_df$end = "至今"
+    pos_df$end = "now"
   }
   if(any(c(missing_start,dates_same))){
     timeline <- pos_df$end
@@ -201,12 +201,12 @@ if(PDF_EXPORT){
 }
 ```
 
-联系方式 {#contact}
+Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> 19840155752@163.com
-- <i class="fa fa-phone"></i> 198-4015-5752
+- <i class="fa fa-envelope"></i> 19858360107@163.com
+- <i class="fa fa-phone"></i> 198-5836-0107
 
 
 Disclaimer {#disclaimer}
@@ -218,46 +218,46 @@ Disclaimer {#disclaimer}
 Main
 ================================================================================
 
-郑晔 {#title}
+Ye(July) Zheng {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r, results='asis'}
-intro_text <- glue("<font size=3>双语社会工作者, 能够独立根据公司情况，将西方社会工作理念和技巧本土化。有着较强的人际交往能力与沟通能力,可以进行简单的商业洽谈, 能够独立代表公司完成资方或者合作方的商业沟通和商务合作, 精通中英文听说读写。寻求一个能够充分展示我的专业技能，运用海外求学经历和过往工作经验的岗位，对社会工作和公益事业充满热情，同时也对社会主义新时代的商业运营模式和商务洽谈的新思路和新方式充满了好奇并做好了充分的工作准备。</font>")
+intro_text <- glue("<font size=3>Bilingual social workers who are able to independently localize Western social work concepts and techniques based on company circumstances. Have strong interpersonal skills and communication skills, able to conduct simple business negotiations, and able to independently represent the company to complete business communications and business cooperation with owners or partners, proficient in Chinese and English including: listening, speaking, reading and writing. Looking for a professionalism that can fully demonstrate my work skills, use overseas studying experience and past working experience in new positions, passionate about social work and public welfare field, and also full of curiosity about the business operations in the new era of socialism.</font>")
 
 cat(sanitize_links(intro_text))
 ```
 
 
-教育背景 {data-concise=true data-icon=graduation-cap data-concise=true}
+Education {data-concise=true data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'education')
 ```
 
-工作经历 {data-concise=true data-icon=briefcase}
+Working Experience {data-concise=true data-icon=briefcase}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'working')
 ```
 
-实习/志愿服务经历 {data-concise=true data-icon=hospital}
+Internship / Volunteer Experience {data-concise=true data-icon=hospital}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'voluntary')
 ```
 
-领导经历 {data-concise=true data-icon=users}
+Leadership {data-concise=true data-icon=users}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'leadership')
 ```
 
-获奖情况 {data-concise=true data-icon=trophy}
+Awards {data-concise=true data-icon=trophy}
 --------------------------------------------------------------------------------
 
 
