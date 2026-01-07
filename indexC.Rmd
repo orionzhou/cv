@@ -291,10 +291,11 @@ N/A
 
 N/A
 
-- Plant Biotechnology Journal
 - JIPB
+- Plant Biotechnol J
 - Plant Physiology
 - BMC Biology
+- BMC Plant Biology
 - Crop Journal
 - The Plant Genome
 
