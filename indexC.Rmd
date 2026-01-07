@@ -166,7 +166,7 @@ fill_nas <- function(column){
 }
 
 # Load csv with position info
-position_data <- read_xlsx('cv.xlsx', sheet='positionsC', na = "NA") %>% 
+table_data <- read_xlsx('cv.xlsx', sheet='positionsC', na = "NA") %>% 
   mutate_all(fill_nas) %>% 
   arrange(order, desc(end)) %>% 
   mutate(id = 1:n()) %>% 
@@ -236,22 +236,38 @@ cat(sanitize_links(intro_text))
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
-print_section(position_data, 'education')
+print_section(table_data, 'education')
 ```
 
-研究经历 {data-icon=laptop}
+工作经历 {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r, results='asis', echo = FALSE}
-print_section(position_data, 'research_positions')
+print_section(table_data, 'research_positions')
 ```
+
+职业经历 {data-icon=user-friends}
+--------------------------------------------------------------------------------
+
+### 主持项目
+
+N/A
+
+N/A
+
+- 中国农业科学院杰出青年英才计划（2024.01-2028.12）
+- 国家重点研发计划课题主持（2023YFF1000104）（2023.12-2028.12）
+- 国家基金委优秀青年科学基金（海外）（2023.01-2025.12）
+- 科技创新2030生物育种重大专项子课题（2023ZD04076）（2023.12-2025.12）
+- 人社部高层次留学人才回国资助（2022.01-2023.12）
+
 
 
 代表性著作 {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'academic_articles0')
+print_section(table_data, 'academic_articles0')
 ```
 
 其他著作 {data-icon=book}
@@ -278,45 +294,9 @@ profile = jsonlite::fromJSON("profile.json")
 :::
 
 ```{r}
-print_section(position_data, 'academic_articles')
+print_section(table_data, 'academic_articles')
 ```
 
-
-职业经历 {data-icon=user-friends}
---------------------------------------------------------------------------------
-
-### 杂志审稿人
-
-N/A
-
-N/A
-
-- JIPB
-- Plant Biotechnol J
-- Plant Physiology
-- BMC Biology
-- BMC Plant Biology
-- Crop Journal
-- The Plant Genome
-
-
-
-大会经历 {data-icon=group}
---------------------------------------------------------------------------------
-
-
-```{r}
-print_section(position_data, 'conference')
-```
-
-
-应邀报告 {data-icon=group}
---------------------------------------------------------------------------------
-
-
-```{r}
-print_section(position_data, 'presentation')
-```
 
 
 ```{r}
